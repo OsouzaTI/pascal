@@ -37,3 +37,4 @@ begin
     readln(c);
     bhaskara(a, b, c);
 end.
+

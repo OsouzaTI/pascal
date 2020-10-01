@@ -29,3 +29,4 @@ begin
     writeln('O aumento foi de : ', (salario * p_aumento):10:2 );
     writeln('Novo salario : ',     (salario + (salario * p_aumento)):10:2 );
 end.
+

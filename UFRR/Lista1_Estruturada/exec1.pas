@@ -8,47 +8,58 @@ program Exercicio_1;
         a dois da adição e multiplicação.
 }
 
-uses Crt;
+{ Tipo Iarray: um vetor de 4 elementos do tipo inteiro }
 type Iarray = array[1..4] of integer;
 var 
-    letras : array[1..4] of char = ('A', 'B', 'C', 'D');
+    { Valor de parâmetro para a função }
     valor_logico : boolean;
-    i, j, k : integer;
+    { Variáveis para uso nos loops }
+    i, j : integer;
+    { Ponteiro para o tipo Iarray }
     n : ^Iarray;
-    indices : array[1..4] of integer;
-
+    { função usada para iterar os vetores e apresentar os resultados um a um sem repetições }
     procedure resultado(var b : boolean);
     begin
         for i := 1 to 4 do
         begin
             for j := 1 to 4 do
             begin
-                if ((j >= i) and (j <> i)) then
+                { verifica se o j é maior que i }
+                if ((j > i)) then
                 begin
+                    { se b é verdadeiro }
                     if b then
                     begin
-                        writeln('multiplicado   ', letras[i], ' * ', letras[j], ' = ', n^[i] * n^[j]);                            
+                        writeln('multiplicado ', n^[i], '*', n^[j], '=', n^[i] * n^[j]);                            
                     end else
+                    { se b é falso }
                     begin
-                        writeln('somado         ', letras[i], ' + ', letras[j], ' = ', n^[i] + n^[j]);                            
+                        writeln('somado ', n^[i], ' + ', n^[j], ' = ', n^[i] + n^[j]);                            
                     end;
                 end;
             end;
         end;
+        { verifica se b é falso }
         if not b then
         begin
             b := true;
+            { invoca a si mesma com o parametro negado }
             resultado(b);
         end;
     end;
 
 begin
+    { inicializa o novo ponteiro }
     new(n);
+    { inicializa a variavel lógica }
+    valor_logico := false;
     writeln('Programa 1');
     for i := 1 to 4 do
     begin
         write('Numero ', i, ': ');
         readln(n^[i]);
     end;
+    { chama a função }
     resultado(valor_logico);
 end.
+

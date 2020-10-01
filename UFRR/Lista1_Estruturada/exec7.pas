@@ -7,3 +7,4 @@ begin
     write('A temperatura ', c_temperatura, ' C em F : ');
     writeln(((9*c_temperatura+160)/5):10:3);
 end.
+

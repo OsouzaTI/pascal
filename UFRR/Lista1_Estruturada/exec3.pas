@@ -21,3 +21,4 @@ begin
     end;
     writeln('A media ponderada : ', soma_numerador/soma_denominador:3:3);
 end.
+

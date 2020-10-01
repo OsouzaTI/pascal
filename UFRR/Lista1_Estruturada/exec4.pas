@@ -9,3 +9,4 @@ begin
     writeln('Novo Salario(+15%) : R$', (salario + (salario * 0.15)):10:3 );
 
 end.
+

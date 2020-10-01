@@ -1,5 +1,5 @@
 program Exercicio_9;
-
+{ funcao para calcular potencia de base e expoente inteiros positivos }
 function power(const a, b: integer):integer;
 var i, p : integer;
 begin
@@ -15,11 +15,12 @@ end;
 
 const PI = 3.14159265358979323846;
 var
-    raio, potancia : integer;
+    raio, potencia : integer;
 begin
     write('Digite o raio da esfera: ');
     readln(raio);
-    potancia := power(raio, 3);
+    potencia := power(raio, 3);
     write('O volume dessa esfera : ');
-    writeln(( (4 * PI * potancia) /3 ):10:3);
+    writeln(( (4 * PI * potencia) /3 ):10:3);
 end.
+

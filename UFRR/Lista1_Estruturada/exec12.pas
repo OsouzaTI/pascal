@@ -8,3 +8,4 @@ begin
     angulo3 := 180 - (angulo1 + angulo2);
     writeln('O valor do angulo 3 : ', angulo3);
 end.
+
