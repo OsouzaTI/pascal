@@ -17,3 +17,4 @@ begin
     readln(numero);
     ImpaPar(numero);
 end.
+

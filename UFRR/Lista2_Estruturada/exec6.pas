@@ -20,20 +20,16 @@ end;
 procedure Conceito(var media : real);
 begin
     write('Conceito: ');
-    if(media >= 8) and (media <= 10) then
-    begin
+    if(media >= 8) and (media <= 10) then begin
         write('A');
     end
-    else if(media >= 7) and (media < 8) then
-    begin
+    else if(media >= 7) and (media < 8) then begin
         write('B');
     end
-    else if(media >= 6) and (media < 7) then
-    begin
+    else if(media >= 6) and (media < 7) then begin
         write('C');
     end
-    else if(media >= 5) and (media < 6) then
-    begin
+    else if(media >= 5) and (media < 6) then begin
         write('D');
     end
     else begin
@@ -44,8 +40,7 @@ end;
 var 
     j : integer;
     pesos : Ivetor = (2, 3, 5);{deve ser igual ao numero de notas}
-    notas : Ivetor;
-    p_media : real;
+    notas : Ivetor; p_media : real;
 begin
     for j := 1 to n_notas do
     begin
@@ -55,3 +50,4 @@ begin
     p_media := MediaPonderada(pesos, notas);
     Conceito(p_media);
 end.
+

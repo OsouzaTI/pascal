@@ -35,3 +35,4 @@ begin
     valor_media := Media(numero_notas);
     Situacao(valor_media);
 end.
+

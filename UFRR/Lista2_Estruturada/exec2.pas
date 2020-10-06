@@ -27,3 +27,4 @@ begin
     readln(valorB);
     MaiorValor(valorA, valorB);
 end.
+

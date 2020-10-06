@@ -33,3 +33,4 @@ begin
     readln(c);
     TipoTriangulo(a, b, c);
 end.
+
