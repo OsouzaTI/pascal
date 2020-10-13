@@ -1,21 +1,28 @@
 program Exercicio6;
 
-
+{ Constantes usadas para o algoritmo }
 const n_times = 5;
 const n_jogadores = 11;
 
+{ Modelo de registro para jogadores }
 type Jogador = record
     idade : integer;
     peso : real;
     altura : real;
 end;
 
+{ Modelo de registro para times de futebol }
 type time = record
     jogadores : array[1..n_jogadores] of Jogador;
 end;
 
+{ tipo de dado onde agrupa varios times(n_times) }
 type times = array[1..n_times] of time;
-
+{
+    Dada uma lista unidimensional de times,
+    é verificado a quantidade de jogadores menores
+    de idade, onde a soma é exibida ao final.
+}
 procedure JogadorDeMenor(var vetor : times);
 var i, j, n : integer;
 begin
@@ -43,7 +50,7 @@ begin
         begin
             soma := soma + vetor[i].jogadores[j].idade;
         end;        
-        write('Media de idade Time ', i, ': ', (soma/n_jogadores):10:3);
+        writeln('Media de idade Time ', i, ': ', (soma/n_jogadores):10:3);
     end;
 end;
 
@@ -62,22 +69,21 @@ begin
 end;
 
 procedure PorcentagemDePesoMaior80(var vetor : times);
-var i, j : integer; pct_peso, soma : real;
+var i, j, soma_jogadores80 : integer; pct_peso : real;
 begin
-    soma := 0;
-    pct_peso := 0;
+    soma_jogadores80 := 0;
     for i := 1 to n_times do
     begin
         for j := 1 to n_jogadores do
         begin 
-            soma := soma + vetor[i].jogadores[j].peso;
             if vetor[i].jogadores[j].peso > 80 then
             begin
-                pct_peso := pct_peso + vetor[i].jogadores[j].peso;
+                soma_jogadores80 := soma_jogadores80 + 1;
             end;
         end;
     end;
-    writeln('A porcentagem de peso maior que 80: ', ((pct_peso/soma)*100):10:3);
+    pct_peso := (soma_jogadores80/(n_times*n_jogadores));
+    writeln('A porcentagem de peso maior que 80: ', (pct_peso*100):10:3);
 end;
 
 var     
@@ -87,7 +93,7 @@ begin
 
     for i := 1 to n_times do
     begin
-        writeln('Time ', i);
+        writeln('=================================Time ', i);
         for j := 1 to n_jogadores do
         begin
             writeln('==========================');
@@ -99,7 +105,6 @@ begin
             readln(vtimes[i].jogadores[j].peso);
             write('=Digite a altura : ');
             readln(vtimes[i].jogadores[j].altura);
-            writeln('==========================');
         end;
     end;
 
@@ -114,3 +119,4 @@ begin
 
 
 end.
+

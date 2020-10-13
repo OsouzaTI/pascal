@@ -1,1 +1,2 @@
-n1 := 0
+    write('Digite um numero: ');
+    readln(n);
