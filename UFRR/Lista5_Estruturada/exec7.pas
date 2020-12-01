@@ -3,6 +3,7 @@ type mat6x4 = array[1..6, 1..4] of integer;
 var
     matrizA, matrizB : mat6x4;
     i, j, m30 : integer;
+    
 begin
     m30 := 0;
     for i := 1 to 6 do
