@@ -11,7 +11,7 @@ begin
         if a[i] = k then
         begin
             b := true;
-            writeln0('Chave encontrada no indice: ', i);
+            writeln('Chave encontrada no indice: ', i);
         end;
     end;
     if not b then
@@ -19,3 +19,4 @@ begin
         writeln('Chave K nao encontrada');
     end;
 end.
+

@@ -19,3 +19,4 @@ begin
         writeln('C',i,': ', c[i]);
     end;
 end.
+
